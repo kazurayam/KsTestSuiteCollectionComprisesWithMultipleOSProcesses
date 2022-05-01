@@ -7,7 +7,7 @@ with your local Katalon Studio.
 This project was developed using Katalon Studio v8.3.0. This is not version-dependent. It will work on any version of KS.
 
 
-# Problem to solve
+## Problem to solve
 
 In the Katalon User forum, there is a topic ["Stopping executing test collection in KRE"](https://forum.katalon.com/t/stopping-executing-test-collection-in-kre/64677). The original poster wrote:
 
@@ -18,7 +18,7 @@ I presume that he did Ctrl-c to kill the OS process in which Katalon Runtime Eng
 
 It seems to me that he expects (wants) everything is gracefully terminated by killing that process by Ctrl-c, but things does not go like this. Why?
 
-# Why? 
+## Why? 
 
 Katalon Runtime Engine (or similarly, Katalon Studio) runs in a single OS process.
 When you run a Test Suite Collection which comprises 2 Test Suites,
@@ -33,7 +33,7 @@ Therefore, as the original post wrote, it is quite likely that we observer
 
 Sending Ctrl-c to the parent process will not be a solution to the problem.
 
-# Demonstration
+## Demonstration
 
 In this demo project, we have
 
@@ -88,3 +88,8 @@ Another is a process where `/Applications/Katalon Studio.app/Contents/Eclipse/jr
 In the console, you can find 1 process of Katalon Studio plus 2 processes of Test Suites are bein executed parallely.
 
 If I have a Test Suite Collection of 8 parallelism, then I will see 8 sub-processes in the `ps` command output.
+
+## Conclusion
+
+When you run a Test Suite Collection with 2 Test Suites contained, you will have 3 OS processes running independently.
+Killing one of them by Ctrl+C will not automatically terminate this set of processes gracefully.
