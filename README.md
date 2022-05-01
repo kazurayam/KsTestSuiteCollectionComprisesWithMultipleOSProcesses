@@ -27,7 +27,7 @@ I am going to present you a demostration of this fact later.
 
 OS will regard these 3 processes are independent.
 Killing one of these 3 process does NOT automatically terminate other sub-processes.
-Therefore, as the original post wrote, it is quite likely that we observer
+Therefore, as the original post wrote, it is quite likely that we observe
 
 >"by killing it via Ctrl-c would result to locked up Reports directory and sometimes tests are still running" 
 
