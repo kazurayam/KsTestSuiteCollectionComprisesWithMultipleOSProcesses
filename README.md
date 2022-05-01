@@ -89,6 +89,13 @@ In the console, you can find 1 process of Katalon Studio plus 2 processes of Tes
 
 If I have a Test Suite Collection of 8 parallelism, then I will see 8 sub-processes in the `ps` command output.
 
+### Is a Test Suite Collection multi-threaded? --- Not at all.
+
+Sometimes, people in the Katalon Forum talk about "parallel execution". Some people seems to have a misunderstanding.
+They seem to think that a Test Suite Collection runs a set of multiple "threads" each of which Test Suites runs.
+You should not confuse "multi threads" and "multi processes".
+These 2 models plays completely different.
+
 ## Conclusion
 
 When you run a Test Suite Collection with 2 Test Suites contained, you will have 3 OS processes running independently.
